@@ -4,7 +4,7 @@
 #
 Name     : R-lsmeans
 Version  : 2.30.0
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/lsmeans_2.30-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lsmeans_2.30-0.tar.gz
 Summary  : Least-Squares Means
@@ -13,33 +13,33 @@ License  : GPL-2.0 GPL-3.0
 Requires: R-emmeans
 BuildRequires : R-emmeans
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-R package **lsmeans**: Least-squares means (estimated marginal means)
-====
-[![cran version](http://www.r-pkg.org/badges/version/lsmeans)](https://cran.r-project.org/package=lsmeans)
-[![downloads](http://cranlogs.r-pkg.org/badges/lsmeans)](http://cranlogs.r-pkg.org/badges/lsmeans)
-[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/lsmeans)](http://cranlogs.r-pkg.org/badges/grand-total/lsmeans)
-[![Research software impact](http://depsy.org/api/package/cran/lsmeans/badge.svg)](http://depsy.org/package/r/lsmeans)
+and mixed models. Compute contrasts or linear functions of 
+    least-squares means, and comparisons of slopes. 
+    Plots and compact letter displays. Least-squares means were proposed in
+    Harvey, W (1960) "Least-squares analysis of data with unequal subclass numbers",
+    Tech Report ARS-20-8, USDA National Agricultural Library, and discussed
+    further in Searle, Speed, and Milliken (1980) "Population marginal means
 
 %prep
 %setup -q -c -n lsmeans
+cd %{_builddir}/lsmeans
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571857715
+export SOURCE_DATE_EPOCH=1589828028
 
 %install
-export SOURCE_DATE_EPOCH=1571857715
+export SOURCE_DATE_EPOCH=1589828028
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
