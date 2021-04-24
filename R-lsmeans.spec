@@ -4,7 +4,7 @@
 #
 Name     : R-lsmeans
 Version  : 2.30.0
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/lsmeans_2.30-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lsmeans_2.30-0.tar.gz
 Summary  : Least-Squares Means
